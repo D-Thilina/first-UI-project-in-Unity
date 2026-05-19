@@ -6,6 +6,7 @@ public class UIManaegr : MonoBehaviour
 {
     public GameObject HomePanel;
     public GameObject Inventory;
+    public GameObject SettingsPanel;
 
     public void openHome()
     {
@@ -19,10 +20,17 @@ public class UIManaegr : MonoBehaviour
         Inventory.SetActive(true);
     }
 
+    public void openSettings()
+    {
+        closeAllPanal();
+        SettingsPanel.SetActive(true);
+    }
+
     void closeAllPanal()
     {
         HomePanel.SetActive(false);
         Inventory.SetActive(false);
+        SettingsPanel.SetActive(false);
     }
 
 }
