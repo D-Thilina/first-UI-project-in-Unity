@@ -7,6 +7,8 @@ public class UIManaegr : MonoBehaviour
     public GameObject HomePanel;
     public GameObject Inventory;
     public GameObject SettingsPanel;
+    public GameObject MailPanel;
+    public GameObject CalenderPanel;
 
     public void openHome()
     {
@@ -26,11 +28,25 @@ public class UIManaegr : MonoBehaviour
         SettingsPanel.SetActive(true);
     }
 
+    public void openmailPanel()
+    {
+        closeAllPanal();
+        MailPanel.SetActive(true);
+    }
+
+    public void openCalender(){
+        closeAllPanal();
+        CalenderPanel.SetActive(true);
+    }
+
+
     void closeAllPanal()
     {
         HomePanel.SetActive(false);
         Inventory.SetActive(false);
         SettingsPanel.SetActive(false);
+        MailPanel.SetActive(false);
+        CalenderPanel.SetActive(false);
     }
 
 }
